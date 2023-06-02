@@ -51,6 +51,7 @@ class ZFSFragment : Fragment() {
         this.kyZFS = kyZFS
         this.cb = cb
         jsonObjects.clear()
+        totalSelectFileSize = 0L
         compressedFiles.clear()
         clear()
         operate()
