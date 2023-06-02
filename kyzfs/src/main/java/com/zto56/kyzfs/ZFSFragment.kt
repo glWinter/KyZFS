@@ -70,7 +70,7 @@ class ZFSFragment : Fragment() {
                 setFileProviderAuthority(requireActivity().packageName + ".fileProvider")
             }.start(Const.REQUEST_CODE_CAMERA)
             2-> FilePickerManager
-                .from(requireActivity())
+                .from(this)
                 .maxSelectable(kyZFS.maxItem)
                 .filter(object : AbstractFileFilter() {
                     override fun doFilter(listData: ArrayList<FileItemBeanImpl>): ArrayList<FileItemBeanImpl> {
