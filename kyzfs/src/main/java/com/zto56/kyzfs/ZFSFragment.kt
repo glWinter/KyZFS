@@ -17,6 +17,7 @@ import com.huantansheng.easyphotos.models.album.entity.Photo
 import com.zto56.kyzfs.Const.Companion.REQUEST_CODE_FILE_SELECT
 import com.zto56.kyzfs.FileUtils.imageForBase64
 import com.zto56.kyzfs.FileUtils.saveBitmap2FileAsQuality
+import com.zto56.kyzfs.luban.Luban
 import com.zto56.kyzfs.zfs.http.FileUploadCallback
 import com.zto56.kyzfs.zfs.http.HttpRepository
 import com.zto56.kyzfs.zfs.model.GenericResponse
@@ -29,7 +30,6 @@ import me.rosuh.filepicker.bean.FileItemBeanImpl
 import me.rosuh.filepicker.config.AbstractFileFilter
 import me.rosuh.filepicker.config.FilePickerManager
 import org.json.JSONObject
-import top.zibin.luban.Luban
 import java.io.File
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
