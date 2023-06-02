@@ -9,6 +9,9 @@ import org.json.JSONObject
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        KyZFS.build {
+            setAuthorization("")
+        }
         KyZFS(this).apply {
             type = 0
             isPrivate = false

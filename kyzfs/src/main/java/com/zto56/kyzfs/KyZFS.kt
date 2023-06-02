@@ -26,8 +26,11 @@ class KyZFS(
     var isShowWaterMaker: Boolean = false,
     var isPrivate: Boolean = false
 ) {
-
-    private constructor(activity: FragmentActivity,builder: Builder) : this(activity,
+    companion object {
+        inline fun build(block: Builder.() -> Unit) = Builder().apply(block).build()
+    }
+    private constructor(builder: Builder) : this(
+        builder.activity!!,
         builder.maxItem,
         builder.maxSize,
         builder.selectedSize,
@@ -49,6 +52,8 @@ class KyZFS(
     )
 
     class Builder {
+        var activity:FragmentActivity? = null
+            private set
         var maxItem = 3
             private set
         var maxSize = 70 * 1024
@@ -71,8 +76,10 @@ class KyZFS(
             private set
         var isPrivate = false
             private set
-
-        fun build(activity: FragmentActivity) = KyZFS(activity,this)
+        fun setContext(activity: FragmentActivity) = apply {
+            this.activity = activity
+        }
+        fun build() = KyZFS(this)
         fun setIsPrivate(isPrivate: Boolean) = apply {
             this.isPrivate = isPrivate
         }

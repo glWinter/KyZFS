@@ -23,7 +23,9 @@ public class TestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         KyZFS zfs = new KyZFS.Builder().setAuthorization("")
                 .setChooseVideo(false)
-                .build(this);
+                .setContext(this)
+                .build();
+
         zfs.start(new KyZFSCb() {
             @Override
             public void success(@NonNull List<? extends JSONObject> list) {
