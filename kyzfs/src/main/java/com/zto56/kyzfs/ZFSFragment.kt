@@ -100,6 +100,7 @@ class ZFSFragment : Fragment() {
                 } else {
                     launch(Dispatchers.Main) {
                         T.t(requireContext(), "选择文件超出大小限制")
+                        progressDialog?.dismiss()
                     }
                 }
             }
@@ -116,6 +117,7 @@ class ZFSFragment : Fragment() {
                 } else {
                     launch(Dispatchers.Main) {
                         T.t(requireContext(), "选择文件超出大小限制")
+                        progressDialog?.dismiss()
                     }
                 }
             }
