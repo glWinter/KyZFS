@@ -72,3 +72,5 @@ zfs.start(list -> {
 | waterMaker      | 水印内容       |
 | isShowWaterMaker   | 是否添加水印        |
 | isPrivate   | zfs文件是否是私有模式        |
+| flag   | zfs文件压缩方式1为webp2为鲁班压缩        |
+| quality   | 压缩质量        |
